@@ -15,7 +15,7 @@ if (dayExists){
     return
 }
     nlwSetup.addDay(today)
-
+}
 function save (){
     localStorage.setItem('NLWSetup@habits', JSON.stringify(nlwSetup.data))    
 }
