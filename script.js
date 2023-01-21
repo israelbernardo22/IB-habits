@@ -14,14 +14,12 @@ if (dayExists){
     alert ("Dia já existente! ❌")
     return
 }
-    alert ("Adicionado com sucesso! ✅")
     nlwSetup.addDay(today)
-}
 
 function save (){
     localStorage.setItem('NLWSetup@habits', JSON.stringify(nlwSetup.data))    
 }
 
-const data = JSON.parse(localStorage.getItem("NLWSetup@habits"))
+const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}
 nlwSetup.setData(data)
 nlwSetup.load()
